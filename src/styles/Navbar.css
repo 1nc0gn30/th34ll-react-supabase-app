@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+.theall-navbar {
+  font-family: 'Michroma', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh 5% 2vh 5%; /* More concise padding declaration */
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.9s ease-in-out, padding 0.9s ease-in-out; /* Ensures smooth background transition */
+}
+
+.theall-navbar:hover {
+  background-color: #333;
+}
+
+.navbar-button-container {
+  padding-right: 2%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Improved dropdown toggle visibility and interaction */
+.dropdown-toggle {
+  display: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+  border: 1px solid #fff; /* Slight border for definition */
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+  background-color: #0f0;
+  color: #000;
+  outline: none;
+}
+
+@media (max-width: 968px) {
+  .theall-navbar {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .dropdown-toggle {
+    display: block;
+    margin-left: auto; /* Align toggle to the right */
+  }
+
+  .navbar-button-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Ensure it drops down directly below the navbar */
+    right: 5%;
+    background-color: #000;
+    border-radius: 5px;
+    width: auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 100; /* Ensure dropdown appears above other content */
+  }
+
+  .navbar-button-container.visible {
+    display: flex;
+  }
+
+  .navbar-button-container a, .navbar-button-container button {
+    text-align: left;
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .navbar-button-container a:hover, .navbar-button-container button:hover {
+    background-color: #555;
+  }
+}
+
+.navbar-buttons {
+  margin-left: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid transparent; /* Prepare for hover effect without shifting content */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.navbar-buttons:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff; /* Highlight border to maintain layout */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.MuiTypography-root {
+  font-family: 'Michroma', sans-serif !important;
+}
+
+.drawerListItem:hover {
+  background-color: #1a1a1a;
+  transform: translateX(5px);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Unified transition for smoother effect */
+}

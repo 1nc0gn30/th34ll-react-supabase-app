@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+.stoicism-learning-container {
+    background-color: #FAF8F5; /* Warm, light background reminiscent of parchment */
+    color: #5D5A56; /* Deep gray for text, mimicking ink */
+    padding: 40px; /* Generous padding for an open feel */
+    font-family: 'Merriweather', serif; /* Serif font for a classic touch */
+    line-height: 1.7; /* Enhanced line spacing for readability */
+}
+
+.stoicism-learning-container h1, .stoicism-learning-container h2 {
+    color: #8A817C; /* Soft, dark clay color for headers */
+    margin-bottom: 2rem; /* Space below headings */
+}
+
+.stoicism-learning-container h1 {
+    font-size: 2.5rem; /* Larger font size for the main title */
+    text-align: center; /* Centering title for emphasis */
+}
+
+.stoicism-learning-container h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #CABDBA; /* Soft border for a subtle division */
+}
+
+.stoicism-learning-container a {
+    color: #789262; /* Earthy green for links, evoking nature and growth */
+    text-decoration: none; /* Clean, modern look without underlines */
+    transition: color 0.3s ease; /* Smooth transition for interactive elements */
+}
+
+.stoicism-learning-container a:hover {
+    color: #9DBF9E; /* Lighter green on hover for visibility and interactivity */
+    text-decoration: underline; /* Underline to indicate clickable links */
+}
+
+.introductions, .deep-dives, .resources {
+    margin-bottom: 40px; /* Spacious separation for clear content distinction */
+}
+
+.introductions ul, .deep-dives ul, .resources ul {
+    list-style-type: none; /* Modern look without bullet points */
+    padding: 0;
+}
+
+.introductions li, .deep-dives li, .resources li {
+    background-color: #EDEAE0; /* Slightly off-white for contrast with the background */
+    margin: 15px 0; /* Space between items for readability */
+    padding: 15px; /* Padding for content separation */
+    border-left: 4px solid #9DBF9E; /* Green highlight for a touch of nature */
+    transition: transform 0.2s ease-in-out; /* Interaction feedback with smooth effect */
+}
+
+.introductions li:hover, .deep-dives li:hover, .resources li:hover {
+    transform: translateX(10px); /* Subtle movement on hover for dynamism */
+}

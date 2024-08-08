@@ -1,0 +1,96 @@
+/* ContactComponent.css */
+@keyframes logoFadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.95);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes buttonPulse {
+  0% {
+      box-shadow: 0 0 8px #0f0, 0 0 10px #0f0;
+  }
+  50% {
+      box-shadow: 0 0 12px #0f0, 0 0 14px #0f0;
+  }
+  100% {
+      box-shadow: 0 0 8px #0f0, 0 0 10px #0f0;
+  }
+}
+
+.ContactComponent {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  background: rgba(0, 0, 0, 0.85); /* Adding a subtle overlay for depth */
+}
+
+.contactForm-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px; /* Increased padding for better spacing */
+  max-width: 600px;
+  background-color: #000;
+  border: 3px solid #0f0; /* Thicker Matrix green border for emphasis */
+  border-radius: 12px; /* Softer rounded corners for a modern look */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6); /* Glowing effect */
+  transition: transform 0.3s ease-in-out; /* Smooth transform transition */
+}
+
+.contactForm-container:hover {
+  transform: translateY(-10px); /* Subtle lift effect on hover */
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.75); /* Enhanced glowing effect */
+}
+
+.contactLogo {
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  animation: logoFadeIn 2s ease-out;
+}
+
+.contactForm-input,
+.contactForm-textArea,
+.contactForm-select {
+  padding: 15px; /* Increased padding for a more tactile feel */
+  margin-bottom: 20px; /* Increased spacing */
+  background: #222;
+  color: #fff;
+  border: 2px solid #0f0;
+  border-radius: 6px; /* Updated border-radius for modern aesthetics */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for hover and focus */
+}
+
+.contactForm-input:focus,
+.contactForm-textArea:focus,
+.contactForm-select:focus {
+  border-color: #fff; /* Highlight focus with a bright contrast */
+}
+
+.contactForm-textArea {
+  resize: vertical;
+  min-height: 150px; /* Increased initial size for better user experience */
+}
+
+.contactForm-sendButton {
+  padding: 12px 25px; /* Adjusted padding for a more substantial button */
+  background: linear-gradient(145deg, #0f0, #0c0); /* Gradient background for visual interest */
+  color: #000;
+  border: none;
+  border-radius: 6px; /* Smoothed corners */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Unified transition for smooth effect */
+  animation: buttonPulse 2s infinite; /* Pulse effect for attention */
+}
+
+.contactForm-sendButton:hover {
+  background: #000; /* Dark background for contrast */
+  color: #0f0; /* Text color change for visibility */
+  border: 2px solid #0f0; /* Border to maintain structure */
+}

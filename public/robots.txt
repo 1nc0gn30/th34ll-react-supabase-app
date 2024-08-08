@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /zh/
+
+Sitemap: https://th34ll.com/sitemap.xml

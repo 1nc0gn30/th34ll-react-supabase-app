@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+:root {
+    --background-dark: #121212;
+    --text-light: #ff7e15;
+    --heading-green: #76FF03;
+    --section-lime: #CDDC39;
+    --underline-blue: #303F9F;
+    --link-purple: #af6efd;
+    --hover-cyan: #03DAC6;
+    --highlight-orange: #FF5722;
+    --button-deep-blue: #1A237E;
+    --button-border-blue: #536DFE;
+    --transition-speed: 0.3s;
+    --hover-scale: 1.05;
+}
+
+.js-learning-container {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding: 40px;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Clip the background animations */
+    position: relative; /* Set context for absolute positioning */
+}
+
+.js-learning-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--background-dark),
+        var(--background-dark) 10px,
+        var(--section-lime) 10px,
+        var(--section-lime) 20px
+    );
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.js-learning-container h1 {
+    color: var(--heading-green);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.js-learning-container h2 {
+    color: var(--section-lime);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--underline-blue);
+    position: relative;
+    z-index: 1;
+}
+
+.js-learning-container a {
+    color: var(--link-purple);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease, text-shadow var(--transition-speed) ease;
+    position: relative;
+    z-index: 1;
+}
+
+.js-learning-container a:hover {
+    color: var(--hover-cyan);
+    text-decoration: underline;
+    text-shadow: 0 0 10px var(--hover-cyan);
+}
+
+.tutorials, .interactive-examples, .resources {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.tutorials li, .interactive-examples li, .resources li {
+    background-color: #242424;
+    margin: 15px 0;
+    padding: 15px;
+    color: black;
+    border-left: 4px solid var(--highlight-orange);
+    transition: transform var(--transition-speed) ease-in-out, box-shadow var(--transition-speed) ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.tutorials li:hover, .interactive-examples li:hover, .resources li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.learning-buttons {
+    background-color: var(--button-deep-blue);
+    color: var(--text-light);
+    border: 2px solid var(--button-border-blue);
+    padding: 10px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    font-weight: 500;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.learning-buttons:hover {
+    background-color: var(--button-border-blue);
+    transform: scale(var(--hover-scale));
+    color: var(--background-dark);
+}
+
+@media (max-width: 768px) {
+    .js-learning-container {
+        padding: 20px;
+    }
+
+    .js-learning-container h1 {
+        font-size: 2rem;
+    }
+
+    .tutorials li, .interactive-examples li, .resources li {
+        padding: 10px;
+    }
+}

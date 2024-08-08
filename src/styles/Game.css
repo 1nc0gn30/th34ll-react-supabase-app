@@ -1,0 +1,68 @@
+.game-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.game-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.code-block {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  overflow-x: auto; /* Allows scrolling for long lines of code */
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap; /* Ensures proper line breaks */
+  word-wrap: break-word; /* Breaks long words */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  resize: none; /* Prevents resizing the textarea */
+}
+
+.game-over button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.game-over button:hover {
+  background-color: #449d44;
+}
+
+.game-over {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .game-container {
+    padding: 15px;
+  }
+
+  .code-block,
+  .input-field,
+  .game-over button {
+    font-size: 14px;
+  }
+}

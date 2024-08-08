@@ -1,0 +1,125 @@
+.container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+  }
+  
+  .matrixOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.95);
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 20;
+  }
+  
+  .heading {
+    color: #0F0;
+    text-transform: uppercase;
+    animation: textGlow 2s ease-in-out infinite;
+    font-size: 3em;
+    font-family: 'Michroma', monospace;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px #0F0, 0 0 20px #0F0, 0 0 30px #0F0, 0 0 40px #0F0;
+  }
+  
+  @keyframes textGlow {
+    0%, 100% { text-shadow: 0 0 10px #0F0, 0 0 20px #0F0, 0 0 30px #0F0; }
+    50% { text-shadow: 0 0 20px #0F0, 0 0 30px #0F0, 0 0 40px #0F0, 0 0 50px #0F0; }
+  }
+  
+  .subHeading {
+    margin-top: 20px;
+    color: #0F0;
+    font-size: 1.8em;
+    font-family: 'Michroma', monospace;
+    font-weight: bold;
+  }
+  
+  .exitButton {
+    align-self: center;
+    border-radius: 10px;
+    background: #F00;
+    color: #FFF;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.4em;
+    font-family: 'Michroma', monospace;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .exitButton:hover {
+    transform: scale(1.05);
+  }
+  
+  .player {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    height: auto;
+    z-index: 5;
+  }
+  
+  /* Responsive adjustments */
+@media (max-width: 768px) {
+    .heading {
+      font-size: 2em; /* Smaller font size for smaller screens */
+    }
+  
+    .subHeading {
+      font-size: 1.2em; /* Adjust subheading font size for mobile */
+    }
+  
+    .exitButton {
+      padding: 8px 16px; /* Adjust button size */
+      font-size: 1em; /* Smaller font size for the button */
+    }
+  
+    .player {
+      height: auto; /* Adjust video player size if necessary */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Further adjustments for very small devices */
+    .heading {
+      font-size: 1.5em;
+    }
+  
+    .subHeading {
+      font-size: 1em;
+    }
+  
+    .exitButton {
+      padding: 6px 12px;
+      font-size: 0.9em;
+    }
+  }

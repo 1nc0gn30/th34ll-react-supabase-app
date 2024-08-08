@@ -1,0 +1,115 @@
+:root {
+    --gradient-start: #0f0; /* Matrix green */
+    --gradient-end: #f0f; /* Cyberpunk magenta */
+    --animation-duration: 3s;
+    --glitch-width: 2px;
+    --glitch-height: 5px;
+  }
+  
+  .quote {
+    text-transform: uppercase;
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    font-size: 6em;
+    color: transparent;
+    background-image: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: fadeInScale var(--animation-duration) ease-in-out infinite alternate,
+               backgroundShift 10s ease infinite,
+               textGlow 5s infinite alternate;
+    transition: opacity 0.5s, transform 0.5s;
+    will-change: opacity, transform, background-color;
+    background-size: 200% 200%;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection for better visual effect */
+  }
+
+  @media (max-width: 768px) {
+    .quote {
+      width: 90vw;
+        font-size: 3.5em !important;
+        text-align: center;
+
+        
+    }
+  }
+  
+  /* Glitch Effect */
+  .quote::before, .quote::after {
+    content: attr(data-text); /* Use the text of the .quote for duplication */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    clip-path: rect(auto, auto, auto, auto);
+  }
+  
+  .quote::before {
+    animation: glitch 2s infinite linear alternate-reverse;
+    color: var(--gradient-start);
+    z-index: -2;
+  }
+  
+  .quote::after {
+    animation: glitch 1s infinite linear alternate;
+    color: var(--gradient-end);
+    z-index: -1;
+  }
+  
+  @keyframes glitch {
+    0%, 100% {
+        clip-path: rect(0, 9999px, 100%, 0);
+        transform: translate(0);
+    }
+    10%, 90% {
+        clip-path: rect(15%, 9999px, 30%, 0);
+        transform: translate(-5px, 5px);
+    }
+    20%, 80% {
+        clip-path: rect(30%, 9999px, 60%, 0);
+        transform: translate(5px, -5px);
+    }
+    30%, 70%, 50% {
+        clip-path: rect(45%, 9999px, 90%, 0);
+        transform: translate(-5px, -5px);
+    }
+    40%, 60% {
+        clip-path: rect(60%, 9999px, 100%, 0);
+        transform: translate(5px, 5px);
+    }
+}
+  
+  /* Digital Rain Keyframe */
+  @keyframes backgroundShift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Neon Glow Effect */
+  @keyframes textGlow {
+    0%, 100% {
+      text-shadow: 0 0 8px rgba(0, 255, 0, 0.7), 0 0 10px rgba(255, 0, 255, 0.7);
+    }
+    50% {
+      text-shadow: 0 0 18px rgba(0, 255, 0, 1), 0 0 20px rgba(255, 0, 255, 1);
+    }
+  }
+  
+  @keyframes fadeInScale {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+  

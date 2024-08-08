@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+:root {
+    --background-soft-beige: #ddcfa7;
+    --text-warm-taupe: #5D534A;
+    --header-earthy-tone: #8A7D72;
+    --border-soft: #CABBA9;
+    --link-sage-green: #799b6b;
+    --link-hover-sage: #4e724e;
+    --highlight-sage-green: #6f8b64;
+    --lighter-beige: #EDE7D9;
+    --transition-smooth: 0.3s ease;
+    --hover-translate: 10px;
+}
+
+.spiritualism-learning-container {
+    background-color: var(--background-soft-beige);
+    color: var(--text-warm-taupe);
+    padding: 40px;
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.7;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(93, 83, 74, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.spiritualism-learning-container::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent, var(--background-soft-beige), transparent);
+    animation: rotate-and-scale 20s infinite linear;
+    z-index: 0;
+}
+
+@keyframes rotate-and-scale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(2.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.spiritualism-learning-container h1, .spiritualism-learning-container h2 {
+    color: var(--header-earthy-tone);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.spiritualism-learning-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.spiritualism-learning-container h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--border-soft);
+    animation: fadeIn 2s ease-out;
+}
+
+.spiritualism-learning-container a {
+    color: var(--link-sage-green);
+    text-decoration: none;
+    transition: color var(--transition-smooth);
+    position: relative;
+    z-index: 1;
+}
+
+.spiritualism-learning-container a:hover {
+    color: var(--link-hover-sage);
+    text-decoration: underline;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.introductions, .deep-dives, .resources {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.introductions li, .deep-dives li, .resources li {
+    background-color: var(--lighter-beige);
+    margin: 15px 0;
+    padding: 15px;
+    border-left: 5px solid var(--highlight-sage-green);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.introductions li:hover, .deep-dives li:hover, .resources li:hover {
+    transform: translateX(var(--hover-translate));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .spiritualism-learning-container {
+        padding: 20px;
+    }
+
+    .spiritualism-learning-container h1 {
+        font-size: 2rem;
+    }
+
+    .introductions li, .deep-dives li, .resources li {
+        padding: 10px;
+    }
+}

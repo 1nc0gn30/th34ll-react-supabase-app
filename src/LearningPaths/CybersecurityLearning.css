@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #000000;
+    --heading-color: #0D47A1;
+    --link-color: #29B6F6;
+    --link-hover-color: #000000;
+    --accent-color: #64B5F6;
+    --section-bg-color: #5e5ebb;
+    --border-color: #BBDEFB;
+    --transition-speed: 0.3s;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --hover-shadow-color: rgba(0, 0, 0, 0.4);
+    --animation-duration: 2s;
+}
+
+.cybersecurity-learning-container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 40px;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.6;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
+    overflow: hidden; /* For pseudo-element animations */
+    position: relative;
+}
+
+.cybersecurity-learning-container:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: linear-gradient(45deg, var(--accent-color), transparent, var(--link-color));
+    z-index: 0;
+    transition: transform var(--transition-speed) ease;
+    transform: rotate(0deg);
+}
+
+.cybersecurity-learning-container:hover:before {
+    transform: rotate(90deg);
+    transition: transform var(--transition-speed) ease;
+}
+
+.cybersecurity-learning-container:hover {
+    box-shadow: 0 8px 16px var(--hover-shadow-color);
+    background-color: #e8eaff; /* A subtle light blue */
+}
+
+.cybersecurity-learning-container h1, .cybersecurity-learning-container h2 {
+    color: var(--heading-color);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cybersecurity-learning-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    animation: fadeInDown var(--animation-duration) ease-out;
+}
+
+.cybersecurity-learning-container h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--border-color);
+    animation: fadeInUp var(--animation-duration) ease-out;
+}
+
+.cybersecurity-learning-container a {
+    color: var(--link-color);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    display: inline-block;
+}
+
+.cybersecurity-learning-container a:hover {
+    color: var(--link-hover-color);
+    transform: scale(1.05);
+    text-shadow: 0 0 8px var(--link-hover-color);
+}
+
+.tutorials, .interactive-platforms, .resources {
+    margin-bottom: 40px;
+    animation: fadeIn var(--animation-duration) ease-out;
+    position: relative;
+    z-index: 1;
+}
+
+.tutorials li, .interactive-platforms li, .resources li {
+    background-color: var(--section-bg-color);
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+.tutorials li:hover, .interactive-platforms li:hover, .resources li:hover {
+    transform: translateX(10px) scale(1.03); /* Combined movement and scaling for dynamic feedback */
+    box-shadow: 0 4px 8px var(--hover-shadow-color);
+}
+
+@media (max-width: 768px) {
+    .cybersecurity-learning-container {
+        padding: 20px;
+    }
+
+    .cybersecurity-learning-container h1 {
+        font-size: 2rem;
+    }
+
+    .tutorials li, .interactive-platforms li, .resources li {
+        margin: 10px 0;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "short_name": "TH3 4LL",
+  "name": "TH3 4LL - Open Educational Resource | Unplugging from the conditional thinking",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "TH3.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "TH3.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,117 @@
+/* ContributionComponent.css */
+@keyframes logoFadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes buttonGlow {
+  from {
+      box-shadow: 0 0 8px #0f0;
+  }
+  to {
+      box-shadow: 0 0 12px #0f0, 0 0 20px #0f0;
+  }
+}
+
+.ContributeComponent {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85); /* Adding a subtle overlay */
+}
+
+.contribution-container {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border: 3px solid #0f0; /* Enhanced border for more visibility */
+  border-radius: 10px; /* Smoothed edges */
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Adding glow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for interaction */
+}
+
+.contribution-container:hover {
+  transform: translateY(-5px); /* Slight raise effect */
+  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.6); /* Enhanced glow */
+}
+
+.paypal-link {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 12px 24px; /* Increased padding for better clickability */
+  background-color: #0f0;
+  color: #000;
+  border-radius: 5px; /* Slightly rounded for modern look */
+  text-decoration: none;
+  transition: background-color 0.2s ease; /* Smooth transition */
+}
+
+.paypal-link:hover {
+  background-color: #0e0; /* Slightly lighter green */
+  animation: buttonGlow 1.5s infinite alternate; /* Glowing effect */
+}
+
+.contribution-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Added gap for better spacing */
+}
+
+.contribution-input,
+.contribution-textArea {
+  width: 90%;
+  max-width: 500px;
+  padding: 15px; /* Increased padding for improved usability */
+  margin: 10px 0;
+  background: #222;
+  color: #fff;
+  border: 2px solid #0f0;
+  border-radius: 5px; /* Modernized border radius */
+  transition: border-color 0.3s ease; /* Smooth transition for focus */
+}
+
+.contribution-input:focus,
+.contribution-textArea:focus {
+  border-color: #fff; /* Highlight focus with white border */
+}
+
+.contribution-textArea {
+  resize: vertical;
+  min-height: 150px; /* Increased minimum height for better text input */
+}
+
+.contribution-button {
+  padding: 12px 25px; /* Adjusted padding */
+  background: linear-gradient(145deg, #0f0, #0c0); /* Gradient for visual appeal */
+  color: #000;
+  border: 2px solid transparent; /* Prepared for hover effect */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Unified transition for all properties */
+}
+
+.contribution-button:hover {
+  background: #000; /* Dark background on hover */
+  color: #0f0; /* Text color change for visibility */
+  border-color: #0f0; /* Border color change to match text */
+  animation: buttonGlow 1.5s infinite alternate; /* Add glow effect */
+}
+
+.contribute-logo {
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  animation: logoFadeIn 2s ease-out; /* Enhanced fade-in effect */
+}

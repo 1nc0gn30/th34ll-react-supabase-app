@@ -1,0 +1,103 @@
+.ToolsComponent {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #121212; /* Dark theme for better contrast */
+}
+
+.tools-container {
+  background-color: #282c34;
+  color: #abb2bf;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+  border: 3px solid #56b6c2; /* Updated accent color */
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%; /* Responsive width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin: 20px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.tools-container h1, .tools-container h2 {
+  color: #61afef; /* Lighter, more vibrant color for headings */
+}
+
+.tools-container a {
+  color: #98c379; /* Softer green for links */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.tools-container a:hover, .tools-container a:focus {
+  color: #dcdfe4; /* Light color for hover */
+  text-decoration: underline; /* Add underline on hover for clarity */
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+li::before {
+  content: "•";
+  color: #56b6c2; /* Bullet point color */
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tools-container {
+    padding: 1rem;
+  }
+
+  .tools-container h1, .tools-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .tools-container a {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* In ToolsComponent.css */
+
+.search-bar-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-bar {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid #00E5FF;
+  background-color: #121212;
+  color: #FFF;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #76FF03;
+  box-shadow: 0 0 8px #76FF03;
+}
+
+.search-bar::placeholder {
+  color: #ccc;
+}

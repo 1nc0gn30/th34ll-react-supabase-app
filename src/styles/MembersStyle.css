@@ -1,0 +1,87 @@
+/* MembersStyle.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+
+:root {
+  --dark-bg: #121212;
+  --primary-text: #E0E0E0;
+  --accent-color: #00FFCC;
+  --secondary-accent: #0AFF99;
+  --detail-accent: rgba(0, 255, 204, 0.2);
+  --hover-bg: rgba(6, 214, 160, 0.1);
+  --font-family: 'Roboto Mono', monospace;
+}
+
+.MembersComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--dark-bg);
+  color: var(--primary-text);
+  font-family: var(--font-family);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.members-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.view-user-profile {
+  background: linear-gradient(145deg, #0a0f0d, #22333b);
+  color: var(--primary-text);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px var(--detail-accent);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-in;
+}
+
+.view-user-profile:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 45px var(--detail-accent);
+  background: var(--hover-bg);
+}
+
+.view-user-profile img {
+  max-width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.view-user-profile img:hover {
+  transform: scale(1.03);
+}
+
+.view-user-profile h2, .view-user-profile p {
+  padding: 10px;
+}
+
+/* Social icons or texts styling */
+.profile-socials p {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 5px;
+  background-color: var(--accent-color);
+  color: var(--dark-bg);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.profile-socials p:hover {
+  background-color: var(--secondary-accent);
+}
+
+@media (max-width: 768px) {
+  .members-page {
+    grid-template-columns: 1fr;
+  }
+
+  .view-user-profile {
+    margin-bottom: 20px;
+  }
+}

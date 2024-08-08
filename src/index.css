@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Michroma', sans-serif;
+background-color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+body {
+background: radial-gradient(circle at top, #121212, #000000);
+
+
+}
+
+.nft-link {
+  
+  font-family: "Luckiest Guy", cursive;
+  color: rgb(29, 163, 253);
+  background-color: rgb(48, 48, 48);
+  text-decoration-color: rgb(250, 98, 42);
+  border-radius: 20px;
+  border: 1px solid rgb(122, 122, 122);
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.nft-link:hover {
+  color: rgb(250, 98, 42); /* Change text color on hover */
+  background-color: rgb(29, 163, 253); /* Change background color on hover */
+  border: 1px solid rgb(250, 98, 42); /* Change border color on hover */
+  text-decoration-color: rgb(29, 163, 253); /* Change text decoration color on hover */
+}

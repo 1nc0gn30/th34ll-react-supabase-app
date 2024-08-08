@@ -1,0 +1,58 @@
+.footer {
+  background-color: black;
+  color: white;
+  padding: 40px 20px; /* Increased padding for better spacing */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  border-top: 2px solid #555; /* Adds a slight separation from the main content */
+}
+
+.footer-content p {
+  margin: 10px 0;
+  line-height: 1.6; /* Improved line spacing for readability */
+}
+
+.footer-contact-section {
+ 
+  gap: 20px; /* Increased gap for better visual separation */
+  animation: fadeIn 1s ease-out; /* Smooth introduction of the contact section */
+}
+
+.footer-contact-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.footer-contact-section a:hover {
+  color: #76FF03; /* Bright color for hover state for better visibility */
+  text-decoration: underline;
+  text-decoration-color: #76FF03; /* Ensures the underline is also in a bright color */
+}
+
+/* Additional styling for responsive behavior */
+@media (max-width: 768px) {
+  .footer-content {
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 20px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .contact-section {
+    flex-direction: column; /* Stack the contact information vertically on smaller screens */
+    gap: 5px; /* Adjust gap for the stacked layout */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

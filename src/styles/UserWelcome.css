@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+
+:root {
+    --soft-green: #4db849;
+    --dark-background: #121212;
+    --lighter-green: #66ff91;
+    --gradient-background: linear-gradient(135deg, #29323c 0%, #485563 100%);
+    --subtle-glow: 0 0 8px #66ff91;
+    --bg-size: 40px 40px;
+}
+
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--dark-background);
+    background-image: var(--gradient-background);
+    background-size: cover;
+    animation: fadeInBackground 5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeInBackground {
+    0% { opacity: 0.85; }
+    100% { opacity: 1; }
+}
+
+a {
+    text-decoration: none;
+    color: var(--soft-green);
+    transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--lighter-green);
+    cursor: pointer;
+    text-shadow: var(--subtle-glow);
+}
+
+.main-content, .user-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    color: var(--soft-green);
+    font-family: 'Source Code Pro', monospace;
+}
+
+.user-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: var(--subtle-glow);
+    border: 2px solid var(--soft-green);
+    transition: transform 0.3s ease-in-out;
+}
+
+.user-avatar:hover {
+    transform: scale(1.05);
+}
+
+.learning-options-container, .background-buttons, .buttons-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.background-buttons {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.learning-buttons, .toggle-animation-btn, .toggle-new-animations-btn, .edit-profile-btn, .background-button {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 20px;
+    border: 1px solid var(--lighter-green);
+    background-color: transparent;
+    color: var(--soft-green);
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: var(--subtle-glow);
+}
+
+.learning-buttons:hover, .toggle-animation-btn:hover, .toggle-new-animations-btn:hover, .edit-profile-btn:hover, .background-button:hover {
+    color: var(--dark-background);
+    background-color: var(--lighter-green);
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .profile-container, .learning-options-container, .background-buttons, .buttons-container {
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .learning-buttons, .toggle-animation-btn, .toggle-new-animations-btn, .edit-profile-btn, .background-button {
+        padding: 8px 16px;
+        font-size: 0.8em;
+    }
+}
+
+.user-profile-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 20px;
+    background: #121212; /* Dark background for less strain on the eyes */
+    color: #ffffff; /* Light text for contrast */
+    min-height: 100vh;
+  }
+  
+  .user-interaction-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .user-interaction-buttons button,
+  .learning-button,
+  .background-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    border-radius: 5px;
+  }
+  
+  .user-interaction-buttons button:hover,
+  .learning-button:hover,
+  .background-button:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+  }
+  
+  .user-profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .user-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4caf50; /* Accent color */
+  }
+  
+  .learning-options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  footer {
+    margin-top: 20px;
+    color: #aaa;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .user-interaction-buttons {
+      flex-direction: column;
+    }
+  
+    .user-profile-content,
+    .learning-options-container {
+      width: 90%;
+    }
+  }
+  
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .learning-options-modal {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  .modal-close-button {
+    align-self: flex-end;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .learning-button {
+    margin: 5px 0;
+    width: 90%;
+    /* Other button styles */
+  }
+  
+  .mrl-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicking through the overlay */
+    z-index: 10; /* Ensure this is above other content but below interactive elements */
+  }
+  
+  .user-interaction-buttons {
+    position: relative;
+    z-index: 20; /* Ensures buttons are clickable and above the Matrix rain */
+  }
+  
+  .user-profile-area {
+    position: relative; /* Needed to properly stack z-indexes */
+  }
+  
+  /* Ensure other elements have appropriate z-index if needed */
+  /* CryptoText Component Styles */
+.crypto-container {
+  min-width: 400px;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #282c34;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto Mono', monospace;
+}
+
+.crypto-container h2 {
+  text-align: center;
+  color: #78c2ad;
+}
+
+/* Grid layout for form fields */
+.crypto-field {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  margin: 15px 0;
+}
+
+.crypto-field label {
+  font-weight: bold;
+  color: #78c2ad;
+}
+
+.crypto-field input, .crypto-field select {
+  width: 90%;
+  padding: 10px;
+  border: 2px solid #78c2ad;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+}
+
+.crypto-field input:focus, .crypto-field select:focus {
+  outline: none;
+  border-color: #00ffcc;
+  box-shadow: 0 0 0 2px rgba(0, 255, 204, 0.2);
+}
+
+.crypto-action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Ensure buttons don't touch */
+  margin-top: 20px;
+}
+
+.crypto-container button {
+  flex-grow: 1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #78c2ad;
+  color: #282c34;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.crypto-container button:hover {
+  background-color: #56a08d;
+}
+
+.crypto-result {
+  margin-top: 20px;
+  padding: 10px;
+  background: #40454e;
+  border-radius: 4px;
+}
+
+.crypto-result p {
+  margin: 0;
+  padding: 5px 0;
+  word-wrap: break-word;
+}

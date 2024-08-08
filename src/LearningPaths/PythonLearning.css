@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+    --background-soft-blue: #F0F8FF;
+    --text-deep-ocean: #204056;
+    --heading-bright-blue: #007ACC;
+    --underline-light-blue: #B3D4FC;
+    --link-light-salmon: #fa8a5e;
+    --hover-orangered: #FF4500;
+    --item-bg-soft-blue: #E6F1FF;
+    --highlight-python-blue: #007ACC;
+    --transition-smooth: 0.3s ease;
+    --hover-translate: 10px;
+    --background-gradient-start: #E6F1FF;
+    --background-gradient-end: #007ACC;
+}
+
+.python-learning-container {
+    background-color: var(--background-soft-blue);
+    color: var(--text-deep-ocean);
+    padding: 40px;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.python-learning-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
+    z-index: 0;
+    transition: all 0.6s ease-out;
+}
+
+.python-learning-container:hover::before {
+    left: 0;
+}
+
+.python-learning-container * {
+    position: relative;
+    z-index: 1;
+}
+
+.python-learning-container h1, .python-learning-container h2 {
+    color: var(--heading-bright-blue);
+    margin-bottom: 2rem;
+    background: -webkit-linear-gradient(45deg, var(--heading-bright-blue), var(--underline-light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.python-learning-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    animation: neonFlicker 1.5s infinite alternate;
+}
+
+@keyframes neonFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 4px var(--heading-bright-blue), 0 0 14px var(--heading-bright-blue), 0 0 30px var(--underline-light-blue), 0 0 60px var(--underline-light-blue);
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.python-learning-container a {
+    color: var(--link-light-salmon);
+    text-decoration: none;
+    transition: color var(--transition-smooth);
+}
+
+.python-learning-container a:hover {
+    color: var(--hover-orangered);
+    text-decoration: underline;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70% { transform: translateX(-10px); }
+    20%, 40%, 60% { transform: translateX(10px); }
+    80% { transform: translateX(8px); }
+    90% { transform: translateX(-8px); }
+}
+
+.tutorials li, .interactive-examples li, .resources li {
+    background-color: var(--item-bg-soft-blue);
+    margin: 15px 0;
+    padding: 15px;
+    border-left: 5px solid var(--highlight-python-blue);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tutorials li:hover, .interactive-examples li:hover, .resources li:hover {
+    transform: translateX(var(--hover-translate));
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .python-learning-container {
+        padding: 20px;
+    }
+    .python-learning-container h1 {
+        font-size: 2rem;
+    }
+    .tutorials li, .interactive-examples li, .resources li {
+        padding: 10px;
+    }
+}

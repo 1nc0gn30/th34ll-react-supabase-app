@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+/* Base styles for the edit user profile section */
+.edit-user-profile {
+    color: #0F0; /* Matrix green */
+    background-color: #000; /* Deep space black */
+    font-family: 'Roboto Mono', monospace; /* Modern, clean monospace */
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #0F0; /* Enhanced Matrix green border */
+    border-radius: 12px; /* Softer edges for a modern touch */
+    box-shadow: 0 0 15px #0F0, 0 0 30px #0F0 inset; /* Glowing effect with depth */
+    margin-bottom: 5vh;
+    transition: transform 0.3s ease, box-shadow 0.5s ease; /* Smooth transitions for interactions */
+    transform: translateZ(0); /* GPU acceleration for smoother animations */
+}
+
+.edit-user-profile:hover {
+    transform: scale(1.03); /* Slight scale for interaction feedback */
+    box-shadow: 0 0 20px #0F0, 0 0 40px #0F0 inset; /* Intensified glow on hover */
+}
+
+.edit-user-profile form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap for clarity */
+}
+
+.edit-user-profile input,
+.edit-user-profile textarea {
+    background-color: #222; /* Slightly lighter black for contrast */
+    color: #0F0; /* Matrix green text */
+    border: 2px solid #0F0; /* Thicker border for standout effect */
+    padding: 12px; /* More padding for better text visibility */
+    border-radius: 6px; /* Modern rounded corners */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for focus effects */
+}
+
+.edit-user-profile input::placeholder,
+.edit-user-profile textarea::placeholder {
+    color: #5F5; /* Lighter green for visibility */
+}
+
+.edit-user-profile input:focus,
+.edit-user-profile textarea:focus {
+    outline: none;
+    border-color: #5F5; /* Highlighted focus state */
+    box-shadow: 0 0 8px #0F0, 0 0 12px #0F0 inset; /* Enhanced focus glow */
+}
+
+.edit-user-profile button {
+    background-color: #0F0; /* Vibrant Matrix green */
+    color: #000; /* Deep space black */
+    border: 2px solid transparent; /* Prepare for hover transition */
+    padding: 12px 24px; /* Generous padding for clickable area */
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px; /* Smooth rounded corners */
+    box-shadow: 0 0 6px #0F0; /* Subtle glow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Smooth transitions for interactive feedback */
+}
+
+.edit-user-profile button:hover {
+    background-color: #000; /* Reversed color scheme on hover */
+    color: #0F0; /* Matrix green text */
+    border-color: #0F0; /* Solid border on hover */
+    box-shadow: 0 0 12px #0F0; /* Enhanced glow */
+    transform: translateY(-4px); /* Lift effect for tactile interaction */
+}
+
+/* Responsive adjustments for optimal viewing on smaller devices */
+@media (max-width: 768px) {
+    .edit-user-profile {
+        width: 90%;
+        padding: 15px; /* Adjusted padding for screen size */
+    }
+}
+
+/* Enhanced floaty effect on focus across all interactive elements */
+.edit-user-profile input:focus,
+.edit-user-profile textarea:focus,
+.edit-user-profile button:hover {
+    transform: translateY(-4px); /* Uniform lift effect for tactile feedback */
+    box-shadow: 0 0 12px #0F0, 0 0 20px #0F0 inset; /* Intensified focus and hover glow */
+}

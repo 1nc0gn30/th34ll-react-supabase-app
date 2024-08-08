@@ -1,0 +1,79 @@
+.matrix-glitch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000; /* Updated to a more specific black to ensure consistency */
+  z-index: -1;
+  overflow: hidden;
+  isolation: isolate; /* Ensures that the canvas is isolated in terms of blend modes, not affecting underlying elements */
+}
+
+/* Enhance the vignette effect for more depth and focus towards the center */
+.matrix-glitch::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Ensures clicks pass through to elements below */
+  background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.75) 100%);
+  z-index: 2;
+}
+
+/* Refined glow effect for a more pronounced neon cyberpunk vibe */
+.matrix-glitch::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: inherit;
+  z-index: -1;
+  filter: blur(12px); /* Increased blur for a more diffuse glow */
+  opacity: 0.7; /* Adjusted opacity for better visibility of the glow */
+  mix-blend-mode: color-dodge; /* Blend mode for enhanced neon glow effect */
+}
+
+body {
+  margin: 0;
+  background-color: #121212; /* A dark theme background for the body to complement the canvas effect */
+  color: #ffffff; /* Ensures text is legible against the dark background */
+  font-family: 'Roboto', sans-serif; /* Specify a modern, readable font */
+}
+
+/* Additional styles for a complete UI */
+
+/* Apply basic styling for text elements to integrate with the cyberpunk theme */
+h1, h2, h3, p {
+  color: #76ff03; /* A neon green for text elements to match the theme */
+  text-shadow: 0 0 5px rgba(118, 255, 3, 0.7); /* Soft glow effect for text */
+}
+
+a {
+  color: #76ff03; /* Link color to match the cyberpunk theme */
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #ffffff; /* Light color for hover state for better visibility */
+  text-decoration: none; /* Remove underline to keep the aesthetic clean */
+}
+
+/* Enhancements for buttons and interactive elements */
+button {
+  background-color: #333; /* Dark background for contrast */
+  color: #76ff03; /* Neon green text */
+  border: 1px solid #76ff03; /* Border to match the neon vibe */
+  padding: 10px 20px; /* Adequate padding for touch targets */
+  cursor: pointer; /* Cursor indication for interactivity */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #76ff03; /* Background color change on hover */
+  color: #000; /* Text color change for contrast */
+}
