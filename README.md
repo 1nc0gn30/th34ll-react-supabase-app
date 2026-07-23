@@ -1,3 +1,55 @@
+# th34ll-react-supabase-app
+
+A project by Neal Frazier
+
+## Overview
+This repository is part of Neal Frazier project collection.
+
+## Tech Stack
+- React
+- Netlify (deployed)
+
+## Project Structure
+```
+th34ll-react-supabase-app/
+  - public
+  - src
+  (103 files total)
+```
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
+
+### Installation
+```bash
+git clone https://github.com/1nc0gn30/th34ll-react-supabase-app.git
+cd th34ll-react-supabase-app
+npm install
+```
+
+### Development
+```bash
+npm run dev
+```
+
+### Build
+```bash
+npm run build
+```
+
+### Available Scripts
+  npm run start - react-scripts start
+  npm run build - react-scripts build
+  npm run test - react-scripts test
+  npm run eject - react-scripts eject
+
+## Original README
+<details>
+<summary>Click to expand original README</summary>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,3 +121,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # th34ll-react-supabase-app
+
+</details>
+
+## TODO / Roadmap
+- [ ] Add LICENSE file
+- [ ] Add Dockerfile for containerized deployment
+- [ ] Consider adding Tailwind CSS
+- [ ] Add CI/CD pipeline
+- [ ] Add contribution guidelines (CONTRIBUTING.md)
+- [ ] Improve error handling and edge cases
+- [ ] Add environment variable documentation
+- [ ] Update dependencies to latest versions
+- [ ] Add code comments and inline documentation
+
+## Deployment
+This project is deployed on Netlify. See netlify.toml for configuration.
+
+## Author
+**Neal Frazier** - [@AshAmplifies](https://github.com/1nc0gn30)
+
+## Links
+- GitHub: https://github.com/1nc0gn30/th34ll-react-supabase-app
+
+---
+*This README was enhanced as part of the neals-projects-2026 batch update.*
