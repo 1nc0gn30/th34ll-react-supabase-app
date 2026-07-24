@@ -1,15 +1,27 @@
-# th34ll-react-supabase-app
+<!-- xonettn -->
+<div align="center">
+
+# ⚛️ Th34Ll React Supabase App
 
 A project by Neal Frazier
 
-## Overview
+
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![Three.js](https://img.shields.io/badge/Three.js-000000?logo=three.js&logoColor=white) ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)
+
+![Deploy](https://img.shields.io/badge/Deployed-Netlify-00C7B7?logo=netlify&logoColor=white)
+
+</div>
+
+---
+
+## 📋 Overview
 This repository is part of Neal Frazier project collection.
 
-## Tech Stack
+## 📦 Tech Stack
 - React
 - Netlify (deployed)
 
-## Project Structure
+## 🗂️ Project Structure
 ```
 th34ll-react-supabase-app/
   - public
@@ -17,36 +29,36 @@ th34ll-react-supabase-app/
   (103 files total)
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 - Node.js (v18+)
 - npm or yarn
 
-### Installation
+### 📦 Installation
 ```bash
 git clone https://github.com/1nc0gn30/th34ll-react-supabase-app.git
 cd th34ll-react-supabase-app
 npm install
 ```
 
-### Development
+### 💻 Development
 ```bash
 npm run dev
 ```
 
-### Build
+### 🔨 Build
 ```bash
 npm run build
 ```
 
-### Available Scripts
+### ⚙️ Available Scripts
   npm run start - react-scripts start
   npm run build - react-scripts build
   npm run test - react-scripts test
   npm run eject - react-scripts eject
 
-## Original README
+## 📂 Original README
 <details>
 <summary>Click to expand original README</summary>
 
@@ -54,7 +66,7 @@ npm run build
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## ⚙️ Available Scripts
 
 In the project directory, you can run:
 
@@ -109,11 +121,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### ⚙️ Advanced Configuration
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+### 🚀 Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
@@ -124,7 +136,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 </details>
 
-## TODO / Roadmap
+## 📝 TODO / Roadmap
 - [ ] Add LICENSE file
 - [ ] Add Dockerfile for containerized deployment
 - [ ] Consider adding Tailwind CSS
@@ -135,14 +147,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] Update dependencies to latest versions
 - [ ] Add code comments and inline documentation
 
-## Deployment
+## 🚀 Deployment
 This project is deployed on Netlify. See netlify.toml for configuration.
 
-## Author
+## 👤 Author
 **Neal Frazier** - [@AshAmplifies](https://github.com/1nc0gn30)
 
-## Links
+## 🔗 Links
 - GitHub: https://github.com/1nc0gn30/th34ll-react-supabase-app
 
 ---
 *This README was enhanced as part of the neals-projects-2026 batch update.*
+
+---
+
+<div align="center">
+
+**[xonettn]** · Built by [Neal Frazier](https://github.com/1nc0gn30) · [@AshAmplifies](https://twitter.com/AshAmplifies)
+
+</div>
